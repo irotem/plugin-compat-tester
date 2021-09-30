@@ -27,7 +27,8 @@ plugins-compat-tester-cli/target/plugins-compat-tester-cli.jar:
 package: plugins-compat-tester-cli/target/plugins-compat-tester-cli.jar
 
 .PHONY: docker
-docker: Dockerfile 
+docker: Dockerfile
+	env
 	docker build -t jenkins/pct .
 
 tmp:
